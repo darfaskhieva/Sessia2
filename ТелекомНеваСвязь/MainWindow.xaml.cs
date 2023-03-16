@@ -23,6 +23,7 @@ namespace ТелекомНеваСвязь
         public MainWindow()
         {
             InitializeComponent();
+            DataBase.Base = new Entities();
         }
     }
 }

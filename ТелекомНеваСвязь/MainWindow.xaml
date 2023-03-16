@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ТелекомНеваСвязь"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="765" Width="800" Icon="/resource/image.ico">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <StackPanel>
+                <Image Source="/resource/Лого ТНС.jpg"/>
+                <StackPanel Name="spAbon" Margin="3">
+                    <Image Source="/picture/Абоненты.png" Width="85"/>
+                    <TextBlock Text="Абоненты" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Name="spEquip" Margin="3">
+                    <Image Source="/picture/Управление обрудованием.png" Width="65"/>
+                    <TextBlock Text="Управление оборудованием" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+                <StackPanel Name="spActiv" Margin="3">
+                    <Image Source="/picture/Активы.png" Width="65"/>
+                    <TextBlock Text="Активы" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Name="spBill" Margin="3">
+                    <Image Source="/picture/Биллинг.png" Width="65"/>
+                    <TextBlock Text="Биллинг" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Name="spPodPol" Margin="3">
+                    <Image Source="/picture/Поддержка пользователей.png" Width="65"/>
+                    <TextBlock Text="Поддержка пользователей" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                </StackPanel>
+                <StackPanel Name="spCRM" Margin="3">
+                    <Image Source="/picture/CRM.png" Width="65"/>
+                    <TextBlock Text="CRM" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
