@@ -46,12 +46,52 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
-
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <TextBlock Text="Абоненты ТНС" FontSize="30" Margin="5"/>
-                
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Text="Абоненты ТНС" FontSize="30" Margin="5"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <ComboBox Name="cbUser" Width="350" Height="30" SelectionChanged="cbUser_SelectionChanged"/>
+                    <Rectangle RadiusX="100" RadiusY="100" Height="60" Width="60" Margin="20,0,20,0">
+                        <Rectangle.Fill>
+                            <ImageBrush x:Name="imgUser" Stretch="UniformToFill"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="События" HorizontalAlignment="Right" Margin="0 0 30 0" VerticalAlignment="Bottom"/>
             </StackPanel>
-
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Frame Name="frameL" NavigationUIVisibility="Hidden"/>
+            </StackPanel>
+            <ListView Grid.Column="1" Name="listEvents" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border >
+                            <Grid Background="#B5DEFA">
+                                <TextBlock Text="{Binding Information}" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
     </Grid>
 </Window>

@@ -25,5 +25,10 @@ namespace ТелекомНеваСвязь
             InitializeComponent();
             DataBase.Base = new Entities();
         }
+
+        private void cbUser_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
